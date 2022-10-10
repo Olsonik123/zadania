@@ -1,0 +1,94 @@
+internal class Program
+    {
+        static int zad1(int a, int b)
+        {
+            return a * a + b * b;
+
+        }
+        public static void karta2zad2(int a)
+        {
+            if (a <= 100 && a < 1000 && a % 17 == 0)
+            {
+                Console.WriteLine("TAK");
+            }
+            else
+            {
+                Console.WriteLine("NIE");
+            }
+        }
+        public static bool karta2zad6(int a, int b)
+        {
+
+            if ((Math.Pow(a, b) - a) % b == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static int karta3zad1(int a)
+        {
+            for (int i = 0; i < a; i++)
+            {
+                Console.WriteLine(i * i * i + 3);
+            }
+            return a;
+        }
+        public static int karta3zad3(int a)
+        {
+            for (int i = 1; i <= a; i++)
+            {
+                if (a % i == 0)
+                {
+                    Console.WriteLine(i);
+                }
+
+            }
+            return a;
+        }
+        public static int karta4zad2(int a)
+        {
+            int suma = 0, cyfra;
+            while(a > 0)
+            {
+                cyfra = a % 10;
+                suma += a / 10;
+                a = a / 10;
+            }
+            return suma;
+        }
+
+
+        static void Main(string[] args)
+        {
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            Console.WriteLine("zad 1:");
+            Console.WriteLine(Program.zad1(a, b));
+            Console.WriteLine("zad 2:");
+            int c = int.Parse(Console.ReadLine());
+            Program.karta2zad2(c);
+            int aa = int.Parse(Console.ReadLine());
+            int p = int.Parse(Console.ReadLine());
+            Console.WriteLine("zad3:");
+            Program.karta2zad6(aa, p);
+            Console.WriteLine("karta 3 zad 1 ");
+            int g = int.Parse(Console.ReadLine());
+            Program.karta3zad1(g);
+
+            Console.WriteLine("karta 3 zad 3 ");
+            int h = int.Parse(Console.ReadLine());
+            Program.karta3zad3(h);
+            Console.WriteLine("karta 4 zad 2 ");
+            int k = int.Parse(Console.ReadLine());
+            Program.karta4zad2(k);
+            Console.WriteLine(karta4zad2(12));
+
+
+            Console.ReadKey();
+
+
+
+        }
